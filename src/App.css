@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color:#E5E5E5 ;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-holder{
+  position: relative;
+  background-color: #70ACD9;
+ 
+}
+.nav-logo{
+  position: absolute;
+  left: 50%;
+  top:100%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+}
+.main-nav{
+  display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.main-nav-header{
+  color: white;
+  padding: 10px;
+  background-image: linear-gradient(to right, #f12711, #f5af19);
+  transition: background 2s ease-in-out;
+}
+.main-nav-header:hover{
+  background-position: 75px;
+}
+.main-nav ul{
+  display: flex;
+  list-style: none;
+  padding: 10px;
+}
+.main-nav ul li a{
+      padding: 10px;
+        margin: 5px;
+    text-decoration: none;
+    color: white;
+}
+.main-nav ul li a:hover{
+  /* border-bottom: 4px solid linear-gradient(to right, #f12711, #f5af19); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* body style */
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.separator{
+  width:.1rem;
+  height: 25vh;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 50%;
+}
+
+.box{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+
+}
+.box-img-holder{
+  width: 20rem;
+  height: 150px;
+  border: 2px dashed #c0c0c0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.box-img{
+  width: 100px;
+  height: 100px;
+  /* position: absolute; */
+}
+.close-icon{
+  position: absolute;
+  right: 8%;
+  top: 15%;
+  cursor: pointer;
+}
+.box-stats{
+  display: flex;
+  justify-content: center;
+}
+.box-color{
+  padding: 10px;
+  margin: 10px;
+  width: 2rem;
+  height: 2rem;
+
+}
+.in-up-btn{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #f12711, #f5af19) ;
+  color: #E5E5E5;
+  font-weight: bold;
+  cursor: pointer;
+  margin:10px 0 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer{
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer-logo{
+  color: #f12711;
+  font-weight: 700;
+  text-decoration: underline dotted;
 }
