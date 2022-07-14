@@ -6,12 +6,17 @@ import React from 'react';
 import About from './components/pages/about/About';
 import Footer from './components/pages/home/Footer';
 import Extractor from './components/pages/extract/Extractor';
+import { Toaster } from 'react-hot-toast';
+
 function App() {
   return (
     <Router>
       <div className='App'>
         <Navbar />
-        <div className='main'>
+        <div>
+          <div>
+            <Toaster position='bottom-right' />
+          </div>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
